@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace jindanlan\Events;
 
 abstract class Event
 {
