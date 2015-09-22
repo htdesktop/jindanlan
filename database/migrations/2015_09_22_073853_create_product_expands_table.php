@@ -12,7 +12,7 @@ class CreateProductExpandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('table', function (Blueprint $table) {
+        Schema::create('product_expands', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
@@ -29,6 +29,6 @@ class CreateProductExpandsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('table');
+        Schema::drop('product_expands');
     }
 }
