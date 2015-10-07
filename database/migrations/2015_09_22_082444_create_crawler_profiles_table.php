@@ -16,7 +16,7 @@ class CreateCrawlerProfilesTable extends Migration
             $table->increments('id');
             $table->integer('platform_id')->unsigned()->index();
             $table->foreign('platform_id')->references('id')->on('platforms')->onDelete('cascade');
-            $table->string('field_name', 20);
+            $table->string('field_name');
             $table->string('field_url');
             $table->enum('url_type', array('Normal', 'DomValue'));
             $table->enum('field_type', array('DomValue', 'Fixed', 'Computed'));

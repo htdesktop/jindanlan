@@ -31,11 +31,9 @@ class ModifyPlatformIdOnCrawlerProfiles extends Migration
     {
         Schema::table('crawler_profiles', function (Blueprint $table) {
             //
-            $table->dropForeign('crawler_profiles_category_id_foreign');
-            $table->dropIndex('crawler_profiles_category_id_index');
-            $table->integer('platform_id')->unsigned()->index()->after('id');
-            $table->foreign('platform_id')->references('id')->on('platforms')->onDelete('cascade');
-            $table->dropColumn('category_id');
+             $table->dropForeign('crawler_profiles_category_id_foreign');
+             $table->dropIndex('crawler_profiles_category_id_index');
+             $table->dropColumn('category_id');
         });
     }
 }
