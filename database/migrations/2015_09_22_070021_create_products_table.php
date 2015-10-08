@@ -17,9 +17,9 @@ class CreateProductsTable extends Migration
             $table->integer('platform_id')->unsigned()->index();
             $table->foreign('platform_id')->references('id')->on('platforms')->onDelete('cascade');
             $table->string('product_name')->nullable;
-            $table->string('rate', 10)->nullable();
-            $table->string('investment_period', 10)->nullable();
-            $table->string('progress', 10)->nullable();
+            $table->float('rate')->nullable();
+            $table->integer('investment_period')->nullable();
+            $table->float('progress')->nullable();
             $table->integer('start_investment_amount')->unsigned()->nullable();
             $table->integer('available_investment_amount')->unsigned()->nullable();
             $table->string('safeguard_mode', 20)->nullable();
