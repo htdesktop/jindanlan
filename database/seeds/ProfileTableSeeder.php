@@ -23,7 +23,6 @@ class ProfileTableSeeder extends Seeder
 		]);
 
 		DB::table('crawler_profiles')->insert([
-			//人人贷
 		    ['category_id' => 1, 'field_name' => 'product_name', 'field_url' => 'http://www.renrendai.com/financeplan/listPlan!detailPlan.action?financePlanId=643', 'url_type' => 'Normal', 'field_type' => 'DomValue', 'field_value' => 'div#plan-basic-panel>div.ui-box-white-bg>div.ui-box-title>h3&text'],
 		    ['category_id' => 1, 'field_name' => 'rate', 'field_url' => 'http://www.renrendai.com/financeplan/listPlan!detailPlan.action?financePlanId=643', 'url_type' => 'Normal', 'field_type' => 'DomValue', 'field_value' => 'em.text-xxxl&text'],
 		    ['category_id' => 1, 'field_name' => 'investment_period', 'field_url' => 'http://www.renrendai.com/financeplan/listPlan!detailPlan.action?financePlanId=643', 'url_type' => 'Normal', 'field_type' => 'Fixed', 'field_value' => '90'],
