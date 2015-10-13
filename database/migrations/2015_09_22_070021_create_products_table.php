@@ -22,8 +22,8 @@ class CreateProductsTable extends Migration
             $table->float('progress')->nullable();
             $table->integer('start_investment_amount')->unsigned()->nullable();
             $table->integer('available_investment_amount')->unsigned()->nullable();
-            $table->string('safeguard_mode', 20)->nullable();
-            $table->string('income_mode', 20)->nullable();
+            $table->string('safeguard_mode')->nullable();
+            $table->string('income_mode')->nullable();
             $table->timestamps();
         });
     }
