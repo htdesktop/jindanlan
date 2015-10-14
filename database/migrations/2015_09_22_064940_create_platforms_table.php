@@ -15,7 +15,6 @@ class CreatePlatformsTable extends Migration
         Schema::create('platforms', function (Blueprint $table) {
             $table->increments('id');
             $table->string('platform_name');
-            $table->string('safety_level')->nullable();
             $table->timestamps();
         });
     }
