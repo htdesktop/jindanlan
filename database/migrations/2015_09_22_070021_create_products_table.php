@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->integer('platform_id')->unsigned()->index();
             $table->foreign('platform_id')->references('id')->on('platforms')->onDelete('cascade');
-            $table->enum('product_type', array('regular','scattered','regular_expand','scattered_expand'))->nullable;
+            $table->enum('product_type', array('regular','scattered','regular_list','regular_expand','scattered_expand'))->nullable;
             $table->string('product_name')->nullable;
             $table->float('rate')->nullable();
             $table->integer('investment_period')->nullable();
