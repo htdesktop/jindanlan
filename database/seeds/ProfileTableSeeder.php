@@ -13,7 +13,8 @@ class ProfileTableSeeder extends Seeder
     {
         DB::table('platforms')->insert([
 		    ['platform_name' => '人人贷'],
-            ['platform_name' => '爱钱进']
+            ['platform_name' => '爱钱进'],
+            ['platform_name' => '点融网']
 		]);
 
 		DB::table('category_profiles')->insert([
@@ -23,7 +24,9 @@ class ProfileTableSeeder extends Seeder
 		    ['category_name' => '散标', 'platform_id' => 1],
             ['category_name' => '爱月投', 'platform_id' => 2],
             ['category_name' => '整存宝', 'platform_id' => 2],
-            ['category_name' => '零钱通', 'platform_id' => 2]
+            ['category_name' => '零钱通', 'platform_id' => 2],
+            ['category_name' => '团团赚', 'platform_id' => 3],
+            ['category_name' => '散标', 'platform_id' => 3]
 		]);
     }
 }
