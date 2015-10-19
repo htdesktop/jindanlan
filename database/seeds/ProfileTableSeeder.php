@@ -15,7 +15,8 @@ class ProfileTableSeeder extends Seeder
 		    ['platform_name' => '人人贷'],
             ['platform_name' => '爱钱进'],
             ['platform_name' => '点融网'],
-            ['platform_name' => '你我贷']
+            ['platform_name' => '你我贷'],
+            ['platform_name' => '投哪儿']
 		]);
 
 		DB::table('category_profiles')->insert([
@@ -29,7 +30,10 @@ class ProfileTableSeeder extends Seeder
             ['category_name' => '团团赚', 'platform_id' => 3],
             ['category_name' => '散标', 'platform_id' => 3],
             ['category_name' => '嘉财有道', 'platform_id' => 4],
-            ['category_name' => '新手专区', 'platform_id' => 4]
+            ['category_name' => '新手专区', 'platform_id' => 4],
+            ['category_name' => '散标', 'platform_id' => 4],
+            ['category_name' => '省心赚', 'platform_id' => 5],
+            ['category_name' => '散标', 'platform_id' => 5]
 		]);
     }
 }
