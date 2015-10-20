@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('productions/index');
 });
+
+Route::resource('platform',"PlatformController",['only' => ['index', 'show']]);
+
+Route::resource('production',"ProductionController",['only' => ['index', 'show']]);
