@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('productions/index');
+    return view('welcome');
 });
 
 Route::resource('platform',"PlatformController",['only' => ['index', 'show']]);

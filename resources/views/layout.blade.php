@@ -10,6 +10,20 @@
    		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+				      <a class="navbar-brand" href="/">成都金蛋篮科技有限公司</a>
+				   </div>
+				   <div>
+				      <ul class="nav navbar-nav">
+				         <li @yield('platform_active')><a href="/platform">平台等级</a></li>
+				         <li @yield('product_active')><a href="/production">产品列表</a></li>
+				      </ul>
+				   </div>
+				</div>
+			</nav>
+
 		 <div class="container">
 		    @yield('content')
 		 </div>

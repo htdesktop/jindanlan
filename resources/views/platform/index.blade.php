@@ -3,6 +3,10 @@
 @section('title')
 	金蛋篮理财
 @stop
+
+@section('platform_active')
+   class='active'
+@stop
 	
 @section('content')
 	<h1>平台安全等级</h1>
