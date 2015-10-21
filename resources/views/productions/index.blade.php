@@ -12,7 +12,7 @@
    <div class="jumbotron">
       <h3 style="color:#00f;">筛选条件选择：</h3>
       <div class="row" style="margin-top:20px">
-         <form class="form-search">
+         <form class="form-search" method="post" url='/production'>
             <div class="col-md-2">
                起投金额：
                    <select class="form-control">

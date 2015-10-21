@@ -40,6 +40,7 @@ class ProductionController extends Controller
     public function store(Request $request)
     {
         //
+        return "post success";
     }
 
     /**
