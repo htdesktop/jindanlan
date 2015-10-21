@@ -18,6 +18,7 @@ class PlatformController extends Controller
     public function index()
     {
         //
+        Platform::find(1)->delete();
         $platforms = Platform::all();
         $platform_levels = PlatformLevel::all();
 

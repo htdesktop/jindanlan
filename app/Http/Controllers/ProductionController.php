@@ -40,10 +40,36 @@ class ProductionController extends Controller
     public function store(Request $request)
     {
         //
-        //\Debugbar::enable();
-         $productList = Product::all();
-        //\Debugbar::info($productList);
-        return "post success";
+        $productList = Product::all();
+        $start_investment_amount = $request->input('start_investment_amount');
+        $start_investment_amount_value = 0;
+        switch ($start_investment_amount) {
+            case '不限':
+                # code...
+                break;
+            case '100以上':
+                $start_investment_amount_value = 100;
+                break;
+            case '500以上':
+               $start_investment_amount_value = 500;
+                break;
+            case '1000以上':
+               $start_investment_amount_value = 1000;
+                break;
+            case '5000以上':
+                $start_investment_amount_value = 5000;
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+        $productList = Product::where('start_investment_amount','>',$start_investment_amount_value)->get();
+        $rate = $request->input('rate');
+        $investment_period = $request->input('investment_period');
+        $platform_grade = $request->input('platform_grade');
+        
+        return view('productions/index')->with('productList', $productList);
     }
 
     /**

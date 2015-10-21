@@ -15,7 +15,7 @@
          <form class="form-search" method="post" url='/production'>
             <div class="col-md-2">
                起投金额：
-                   <select class="form-control">
+                   <select class="form-control" name="start_investment_amount">
                     <option>不限</option>
                     <option>100以上</option>
                     <option>500以上</option>
@@ -24,26 +24,28 @@
                   </select>
             </div>
             <div class="col-md-2">
-               回款方式：
-               <select class="form-control">
+               预期收益：
+               <select class="form-control" name="rate">
                  <option>不限</option>
-                 <option>到期还本换息</option>
-                 <option>先付息再还本</option>
-                 <option>等额本息</option>
+                 <option>5%以下</option>
+                 <option>5%-10%</option>
+                 <option>10%以上</option>
                </select>
             </div>
             <div class="col-md-2">
-               保障方式：
-                <select class="form-control">
+               锁定期限：
+                <select class="form-control" name="investment_period">
                  <option>不限</option>
-                 <option>本息担保</option>
-                 <option>本金担保</option>
-                 <option>不担保</option>
+                 <option>1个月以内</option>
+                 <option>1-3个月</option>
+                 <option>3-6个月</option>
+                 <option>6-12个月</option>
+                 <option>1年以上</option>
                </select>
             </div>
             <div class="col-md-2">
               平台安全等级：
-                <select class="form-control">
+                <select class="form-control" name="platform_grade">
                  <option>不限</option>
                  <option>A++</option>
                  <option>A+</option>
