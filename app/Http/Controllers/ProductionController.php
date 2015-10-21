@@ -40,6 +40,9 @@ class ProductionController extends Controller
     public function store(Request $request)
     {
         //
+        //\Debugbar::enable();
+         $productList = Product::all();
+        //\Debugbar::info($productList);
         return "post success";
     }
 
