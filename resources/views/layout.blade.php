@@ -5,9 +5,11 @@
 		  <title>
 		  	@yield('title')
 		  </title>
+		  @yield('csslink')
 		  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		  <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
    		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   		 @yield('jslink')
 	</head>
 	<body>
 			<nav class="navbar navbar-default" role="navigation">
