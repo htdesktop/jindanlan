@@ -5,6 +5,7 @@ namespace jindanlan\Http\Controllers;
 use Illuminate\Http\Request;
 use jindanlan\Http\Requests;
 use jindanlan\Http\Controllers\Controller;
+use jindanlan\Models\Platform;
 use jindanlan\Models\Product;
 
 class ProductionController extends Controller
@@ -40,6 +41,7 @@ class ProductionController extends Controller
     public function store(Request $request)
     {
        // $productList = Product::all();
+
         $start_investment_amount = $request->input('start_investment_amount');
         $start_investment_amount_value = 0;
         switch ($start_investment_amount) {
@@ -144,11 +146,103 @@ class ProductionController extends Controller
                 break;
         }
         $platform_grade = $request->input('platform_grade');
-
-         $productList = \DB::table('products')->where('start_investment_amount','>=',$start_investment_amount_value)
+        $productList = \DB::table('platforms')->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+        ->where('start_investment_amount','>=',$start_investment_amount_value)
         ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
         ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
-        
+
+        //  $productList = \DB::table('platforms')->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+        // ->where('start_investment_amount','>=',$start_investment_amount_value)
+        // ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+        // ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+        switch ($platform_grade) {
+            case '不限':
+             # code...
+                break;
+            case 'A++':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'A++');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+            case 'A+':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'A+');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+            case 'A':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'A');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+            case 'B++':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'B++');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+            case 'B+':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'B+');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+           case 'B':
+            {
+               $productList = Platform::whereHas('platform_levels', function($q)
+                {
+                    $q->where('grade_value', 'like', 'B');
+
+                })->leftJoin('products', 'platforms.id', '=', 'products.platform_id')
+                ->where('start_investment_amount','>=',$start_investment_amount_value)
+                ->where('rate','>=',$rate_start_value)->where('rate','<',$rate_end_value)
+                ->where('investment_period','>=',$investment_period_start_value)->where('investment_period','<=',$investment_period_end_value)->get();
+            }
+               
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+
         return view('productions/index')->with('productList', $productList);
     }
 
