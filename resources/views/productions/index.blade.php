@@ -36,6 +36,7 @@
                锁定期限：
                 <select class="form-control" name="investment_period">
                  <option>不限</option>
+                 <option>1周以内</option>
                  <option>1个月以内</option>
                  <option>1-3个月</option>
                  <option>3-6个月</option>

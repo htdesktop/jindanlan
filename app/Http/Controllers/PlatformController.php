@@ -7,6 +7,7 @@ use jindanlan\Http\Requests;
 use jindanlan\Http\Controllers\Controller;
 use jindanlan\Models\Platform;
 use jindanlan\Models\PlatformLevel;
+use Illuminate\Support\Facades\DB;
 
 class PlatformController extends Controller
 {
@@ -18,7 +19,6 @@ class PlatformController extends Controller
     public function index()
     {
         //
-        Platform::find(1)->delete();
         $platforms = Platform::all();
         $platform_levels = PlatformLevel::all();
 
