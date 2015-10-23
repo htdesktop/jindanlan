@@ -11,6 +11,6 @@
 
 @section('content')
 <div class="logoDiv">
-	<img src="{{URL::asset('assets/img/logo.png')}}" class="logoimg" alt="金蛋篮科技有限公司">
+	<img src="{{URL::asset('assets/img/logo.png')}}" class="logoimg" style="position: absolute;" alt="金蛋篮科技有限公司">
 </div>
 @stop
