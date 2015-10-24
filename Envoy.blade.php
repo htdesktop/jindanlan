@@ -1,7 +1,7 @@
 @servers(['web' => 'root@123.57.92.162'])
 
-@task('deploy')
+@task('deploy',['on' => 'web', 'confirm' => true])
     cd /usr/share/nginx/jindanlan
     git pull origin master
-    service nginx restart
+    php artisan migrate:refresh --seed
 @endtask
