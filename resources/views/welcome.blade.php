@@ -1,6 +1,6 @@
 @extends ('layout')
 @section('title')
-    金蛋篮科技有限公司
+    金蛋篮科技有限测试公司
 @stop
 @section('csslink')
 	 <link rel="stylesheet" href='{{URL::asset('assets/css/production/index.css')}}'>
