@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::resource('platform',"PlatformController",['only' => ['index', 'show']]);
 
 Route::resource('production',"ProductionController");
+
+#pay 
+Route::get('/testpay', 'PayController@index');
+Route::post('/pay', 'PayController@pay');
+Route::post('/payhooks', 'PayController@payHooks');

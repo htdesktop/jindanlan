@@ -5,11 +5,8 @@ namespace jindanlan\Http\Controllers;
 use Illuminate\Http\Request;
 use jindanlan\Http\Requests;
 use jindanlan\Http\Controllers\Controller;
-use jindanlan\Models\Platform;
-use jindanlan\Models\PlatformLevel;
-use Illuminate\Support\Facades\DB;
 
-class PlatformController extends Controller
+class PayController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,21 +14,35 @@ class PlatformController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-        $platforms = Platform::all();
-        $platform_levels = PlatformLevel::all();
-
-        return view("platform/index")->with('PlatformArray', $platforms)->with('PlatformLevelArray', $platform_levels);
+    {        
+        return view("pay/index");
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function pay()
     {
-        //
+        \Pingpp\Pingpp::setApiKey('sk_test_urT4i5iPOCiHPmj5K0uLO0GK');
+        $res = \Pingpp\Charge::create(array(
+            'order_no'  => '123456789',
+            'amount'    => '100',
+            'app'       => array('id' => 'app_9iLSeP8Oi5SGznbj'),
+            'channel'   => 'alipay_pc_direct',
+            'currency'  => 'cny',
+            'client_ip' => '127.0.0.1',
+            'subject'   => 'Your Subject',
+            'body'      => 'Your Body',
+            'extra' => array('success_url' => 'http://www.jindanlan.com/')
+        ));
+
+        \Debugbar::info($res);
+        $content = $res;
+        $status = 200;
+        $value = "text/json";
+        return response($content, $status)
+              ->header('Content-Type', $value);
     }
 
     /**
@@ -40,9 +51,14 @@ class PlatformController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function payHooks()
     {
-        //
+        $content = "finshed";
+        $status = 200;
+        $value = "text/html";
+        
+        return response($content, $status)
+              ->header('Content-Type', $value);
     }
 
     /**
