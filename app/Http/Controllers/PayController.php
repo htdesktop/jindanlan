@@ -57,7 +57,7 @@ class PayController extends Controller
         $status = 200;
         $value = "text/html";
         $hookType = $request->input('type');
-        \Log::warning('付款回调：' + $hookType);
+        \Log::warning('付款回调成功');
         
         return response($content, $status)
               ->header('Content-Type', $value);
