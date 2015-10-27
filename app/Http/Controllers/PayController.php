@@ -51,11 +51,13 @@ class PayController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function payHooks()
+    public function payHooks(Request  $request)
     {
         $content = "finshed";
         $status = 200;
         $value = "text/html";
+        $hookType = $request->input('type');
+        \Log::warning('付款回调：' + $hookType);
         
         return response($content, $status)
               ->header('Content-Type', $value);
