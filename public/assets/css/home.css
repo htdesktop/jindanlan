@@ -17,10 +17,11 @@ a{ text-decoration:none; outline:none; cursor:pointer;}
 }
 #logodiv{
 	width: 120px;
-	height: 46px;
-	margin-top: 6px;
+	height: 49px;
+	margin-top: 3px;
 	margin-left:50px; 
 	background: url(/assets/img/logo140.png) no-repeat;
+	background-size:100% 100%; 
 	position: absolute;
 }
 #jointext{
