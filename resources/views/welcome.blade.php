@@ -1,16 +1,28 @@
-@extends ('layout')
-@section('title')
-    金蛋篮科技有限公司
-@stop
-@section('csslink')
-	 <link rel="stylesheet" href='{{URL::asset('assets/css/production/index.css')}}'>
-@stop
-@section('jslink')
-	 <script src='{{URL::asset('assets/lib/index.js')}}'></script>
-@stop
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>金蛋篮：助力优秀小微企业互联网众筹融资</title>
+	<meta name="description" content="面向优秀小微企业的互联网众筹融资平台。投资身边用心经营的小微实体，兑现其互联网时代的口碑价值。汇聚微众，点亮实体经济">
 
-@section('content')
-<div class="logoDiv">
-	<img src="{{URL::asset('assets/img/logo.png')}}" class="logoimg" style="position: absolute;" alt="金蛋篮科技有限公司">
-</div>
-@stop
+	<link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">
+	<script type='text/javascript'>
+		var bodyresize = function(){
+			
+		};
+	</script>
+</head>
+<body onresize='bodyresize()'>
+	<div id="contain">
+		<div id='headback'></div>
+		<div id='logodiv'></div>
+		<a id='jointext' href="#">加入我们</a>
+		<div class="centeDiv">
+			<h1 class="maintitle">聚微众&#12288 筹未来</h1>
+			<h5 class="descrp">面向优秀小微企业的互联网众筹融资平台</h5>
+			<div class="codeimage"></div>
+		</div>
+		<div class="footer">©2015 金蛋篮  ｜ 蜀ICP备15028731号 ｜ 成都蛋篮科技有限公司</div>
+	</div>
+</body>
+</html>

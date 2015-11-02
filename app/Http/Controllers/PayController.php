@@ -26,10 +26,10 @@ class PayController extends Controller
     {
         \Pingpp\Pingpp::setApiKey('sk_test_urT4i5iPOCiHPmj5K0uLO0GK');
         $res = \Pingpp\Charge::create(array(
-            'order_no'  => '123456789',
+            'order_no'  => '0123456789',
             'amount'    => '100',
             'app'       => array('id' => 'app_9iLSeP8Oi5SGznbj'),
-            'channel'   => 'alipay_pc_direct',
+            'channel'   => 'upacp_pc',
             'currency'  => 'cny',
             'client_ip' => '127.0.0.1',
             'subject'   => 'Your Subject',
@@ -57,7 +57,7 @@ class PayController extends Controller
         $status = 200;
         $value = "text/html";
         $hookType = $request->input('type');
-        \Log::warning('付款回调成功');
+        \Log::warning($hookType);
         
         return response($content, $status)
               ->header('Content-Type', $value);
