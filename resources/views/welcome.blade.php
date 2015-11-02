@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>金蛋篮：助力优秀小微企业互联网众筹融资</title>
 	<meta name="description" content="面向优秀小微企业的互联网众筹融资平台。投资身边用心经营的小微实体，兑现其互联网时代的口碑价值。汇聚微众，点亮实体经济">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
 
 	<link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo16.png" />
