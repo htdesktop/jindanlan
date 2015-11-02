@@ -23,12 +23,12 @@ a{ text-decoration:none; outline:none; cursor:pointer;}
 	position: absolute;
 }
 #jointext{
-	width: auto;
 	height: 58px;
 	line-height: 58px;
-  float:right;
-  margin-right: 50px;
+  left:100%;
+  margin-left: -114px;
 	color: #fff;
+	position: absolute;
 }
 .centeDiv{
 	width: 400px;

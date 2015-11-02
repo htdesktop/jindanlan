@@ -6,17 +6,13 @@
 	<meta name="description" content="面向优秀小微企业的互联网众筹融资平台。投资身边用心经营的小微实体，兑现其互联网时代的口碑价值。汇聚微众，点亮实体经济">
 
 	<link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">
-	<script type='text/javascript'>
-		var bodyresize = function(){
-			
-		};
-	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo16.png" />
 </head>
 <body onresize='bodyresize()'>
 	<div id="contain">
 		<div id='headback'></div>
 		<div id='logodiv'></div>
-		<a id='jointext' href="#">加入我们</a>
+		<a id='jointext' href="http://c.hr.lagou.com/gongsi/j95583.html">加入我们</a>
 		<div class="centeDiv">
 			<h1 class="maintitle">聚微众&#12288 筹未来</h1>
 			<h5 class="descrp">面向优秀小微企业的互联网众筹融资平台</h5>
