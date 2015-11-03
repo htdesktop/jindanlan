@@ -46,16 +46,14 @@ a{ text-decoration:none; outline:none; cursor:pointer;}
 }
 .maintitle{
 	margin-top: 80px;
-	font-family:华文行楷,微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+	font-family:"STKaiti","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 .descrp{margin-top: 20px;}
-.codeimage{
+img.codeimage{
 	width: 150px;
 	height: 150px;
-	margin-left: 125px;
+	/*margin-left: 125px;*/
 	margin-top: 30px;
-	background: url(/assets/img/qrcode_for_gh_9172477aba80_258.jpg) no-repeat;
-	background-size:100% 100%; 
 }
 .footer{
 	width: 100%;

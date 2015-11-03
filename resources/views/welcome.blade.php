@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<title>金蛋篮：助力优秀小微企业互联网众筹融资</title>
 	<meta name="description" content="面向优秀小微企业的互联网众筹融资平台。投资身边用心经营的小微实体，兑现其互联网时代的口碑价值。汇聚微众，点亮实体经济">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
 
 	<link rel="stylesheet" href="{{URL::asset('assets/css/home.css')}}">
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo16.png" />
 </head>
-<body onresize='bodyresize()'>
+<body>
 	<div id="contain">
 		<div id='headback'></div>
 		<div id='logodiv'></div>
@@ -17,7 +17,7 @@
 		<div class="centeDiv">
 			<h1 class="maintitle">聚微众&#12288 筹未来</h1>
 			<h5 class="descrp">面向优秀小微企业的互联网众筹融资平台</h5>
-			<div class="codeimage"></div>
+			<img class="codeimage" src="/assets/img/qrcode_for_gh_9172477aba80_258.jpg"></img>
 		</div>
 		<div class="footer">©2015 金蛋篮  ｜ 蜀ICP备15028731号 ｜ 成都蛋篮科技有限公司</div>
 	</div>
