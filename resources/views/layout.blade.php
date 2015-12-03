@@ -15,7 +15,7 @@
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-				      <a class="navbar-brand" href="/">成都金蛋篮科技有限公司</a>
+				      <a class="navbar-brand" href="/">成都蛋篮科技有限公司</a>
 				   </div>
 				   <div>
 				      <ul class="nav navbar-nav">
