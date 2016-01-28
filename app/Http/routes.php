@@ -23,3 +23,5 @@ Route::resource('production',"ProductionController");
 Route::get('/testpay', 'PayController@index');
 Route::post('/pay', 'PayController@pay');
 Route::post('/payhooks', 'PayController@payHooks');
+
+Route::post('/test', 'TestController@store');

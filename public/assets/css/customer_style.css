@@ -1,0 +1,11 @@
+.ui-icon-arrow-down{
+	background-image:url(/assets/img/arrow_down.png);
+	-moz-background-size:18px 18px;-o-background-size:18px 18px;
+	-webkit-background-size:18px 18px;
+	background-size:18px 18px
+}
+.ui-block-a-split{
+	position: absolute;
+	top:50%;
+	margin-top:-4px: 
+}
