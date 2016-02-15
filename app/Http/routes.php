@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('platform',"PlatformController",['only' => ['index', 'show']]);
+// Route::resource('platform',"PlatformController",['only' => ['index', 'show']]);
 
-Route::resource('production',"ProductionController");
+// Route::resource('production',"ProductionController");
 
-#pay 
-Route::get('/testpay', 'PayController@index');
-Route::post('/pay', 'PayController@pay');
-Route::post('/payhooks', 'PayController@payHooks');
+// #pay 
+// Route::get('/testpay', 'PayController@index');
+// Route::post('/pay', 'PayController@pay');
+// Route::post('/payhooks', 'PayController@payHooks');
 
-Route::post('/test', 'TestController@store');
+// Route::post('/test', 'TestController@store');
